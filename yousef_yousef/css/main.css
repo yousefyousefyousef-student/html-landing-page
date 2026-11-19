@@ -1,0 +1,149 @@
+/* variables */
+:root{
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-background: #f6f6f6;
+}
+
+/* start global style */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:'work sans', sans-serif;
+    margin: 0; 
+}
+.container{
+   padding-left: 20px;
+   padding-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+}
+/* end global style */
+
+/* start media query */
+/* large screens */
+@media(min-width:1200px){
+    .container{
+        width: 1150px;
+    }
+}
+/* medium screens */
+@media(min-width:990px){
+    .container{
+        width: 970px;
+    }
+}
+/* small screens */
+@media(min-width:760px){
+    .container{
+        width: 750px;
+    }
+}
+/* end media query */
+
+/* start header */
+#logo{ 
+    width: 70px;
+}
+header{
+    padding: 15px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+}
+header .links{
+    position: relative;
+}
+header .links ul{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    padding: 0;
+    display: none;
+    margin: 0;
+    z-index: 1;
+}
+header .links:hover ul{
+    display: block;
+}
+header ul a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: 0.3s;
+}
+header ul a:hover{
+    padding-left: 20px;
+}
+header .links i{
+    font-size: 25px;
+}
+header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+/* end header */
+
+/* start landing */
+#landing{
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 60px);
+    position: relative;
+}
+#landing h1{
+    margin: 0;
+}
+#landing .intro{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 300px;
+}
+#landing h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin:0;
+}
+#landing p{
+    font-size: 20px;
+    line-height: 2;
+}
+/* end landing */
+
+/* start features */
+#features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    grid-gap: 20px;
+}
+#features .feat{
+    text-align: center;
+    padding: 20px;
+}
+#features .feat i{
+    font-size: 40px;
+    color: var(--main-color)
+}
+#features .feat h1{
+    font-weight: 800;
+}
+#features .feat p{
+    color: var(--secondary-color)
+}
+/* end features */
